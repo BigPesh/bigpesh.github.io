@@ -1,1 +1,59 @@
-Hello World
+It's been a while since I posted anything on here, so I thought I would write a post about JSON files and how I tend to use them inside my applications, hopefully you will find it helpful and even learn a little.
+
+###JSON Files
+So what actually is a JSON (JavaScript Object Notation) file?
+
+JSON is a language-independent data format. It was derived from JavaScript, but many modern programming languages include code to generate and parse JSON-format data. JSON filenames use the extension `.json`. 
+
+  [Wikipedia Further Reading (where I pinched the above paragraph)](https://en.wikipedia.org/wiki/JSON)
+
+You can download this example `json` file used in this post from [here](http://www.bigpesh.co.uk/downloads) to play with.
+
+###Syntax
+The syntax of a json file is extreamly simple to read and write, you can see a json file example below...
+
+![json example](/Users/grantpeach/Desktop/json file.png)
+
+As you can see from the example above, a `json` file is very similar if not not identical to a python `dict`.
+
+So lets break it down a little...
+
+First the file opens with an opening bracket `{` you can then see that inside that bracket we have `keys` and `values`.
+
+*example*: `"firstName"` is the key and `"John"` is the `value` of that `key`
+
+After all the other values the file is closed off with a closing bracket `}`
+
+Ok so you may be thinking why are there other `{}`'s and also `[]`'s inside the opening bracket?
+
+So from the example you can see we have a `value` with a name of `"phoneNumbers":` followed by a `list` with two `values` of `keys` and `values`. This allows you to assign multiple `keys` and `values` just with a diffrent name from inside the same file.
+
+###Accessing The Data
+So now we have broken down a `json` file, we need to be able to get the `values` from the `keys` for us to use in our Python programs.
+
+To do this is real simple, first of all you will have to import a library called `json`
+
+`import json`
+
+we then have to tell our program to access the `json` file so we can read it's contents, we do this like below...
+
+`data = with open('testdata.json', 'r')`
+
+We now have the `json` file data inside our variable `data`
+
+Now we can grab `values` by doing the below and asking for the data of the given `key`...
+
+`firstName = data["firstName"]`
+
+If you print this to the console you would get the result `John`
+
+###Writing Data
+So now we know how to access data, you may want to change a `keys` and `values`, here's how...
+
+
+
+
+
+
+
+
